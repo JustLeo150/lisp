@@ -1,0 +1,7 @@
+(defun razd (lst)
+  (if (car lst)
+      (cons (car lst)
+            (razd (cddr lst)))))
+
+
+(print (razd '(1 2 3 4 5)))
