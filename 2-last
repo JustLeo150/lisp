@@ -14,3 +14,11 @@
     )(car lst)(cdr lst)
 )
 (print(last '(1 2 3 4)))
+
+
+(defun last (lst)
+           (cond ((null (cdr lst)) (car lst))
+           (t  (last(cdr lst))))     
+   
+)
+(print (last '(1 2 3 4)))
