@@ -1,0 +1,15 @@
+(defun change (list )
+  (loop
+     for item in list   do
+    (if(eq 1 item) (setq a "one"))
+    (if(eq 2 item) (setq a "two")) 
+    (if(eq 3 item) (setq a "three")) 
+    (if(eq 4 item) (setq a "four")) 
+    (if(eq 5 item) (setq a "five")) 
+    (if(eq 6 item) (setq a "six")) 
+    (if(eq 7 item) (setq a "seven")) 
+    (if(eq 8 item) (setq a "eight")) 
+    (if(eq 9 item) (setq a "nine"))
+    (if(eq 0 item) (setq a "zeo")) 
+     collect a))
+(print(change'(1 2 3 4)))
