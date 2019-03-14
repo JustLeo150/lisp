@@ -1,24 +1,10 @@
-(defun last (lst)
+(defun lastq (lst)
 
     ((lambda(head tail)
-           (cond ((null '(tail)) head)
-           (t  (last(tail))))     
+           (cond ((null tail) head)
+           (t  (lastq tail)))     
     )(car lst)(cdr lst))
 )
-(print (last '(1 2 3 4)))
-
-(defun last (lst)
-
-    (lambda(head tail)
-           (if (eq nil tail) print(head)  last'(tail))  
-    )(car lst)(cdr lst)
-)
-(print(last '(1 2 3 4)))
-
-
-(defun last (lst)
-           (cond ((null (cdr lst)) (car lst))
-           (t  (last(cdr lst))))     
-   
-)
-(print (last '(1 2 3 4)))
+(print (lastq '(1 2 3 4)))
+(print (lastq '(1 2 3)))
+(print (lastq '())
