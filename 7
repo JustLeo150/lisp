@@ -1,7 +1,12 @@
 (defun razd (lst)
-  (if (car lst)
-      (cons (car lst)
-            (razd (cddr lst)))))
+
+    ((lambda(head tail)
+           (if head
+            (cons head
+            (razd (cddr lst))))  
+    )(car lst)(cdr lst))
+)
+(print (razd '(1 2 3 4)))
 
 
-(print (razd '(1 2 3 4 5)))
+
