@@ -2,7 +2,7 @@
    ((lambda(head tail)
      (if head
             (cons head
-            (divide (cddr lst))))  
+            (divide (cdr tail))))  
     ) 
     (car lst)
     (cdr lst)
