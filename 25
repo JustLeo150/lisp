@@ -1,7 +1,0 @@
-(defun razdel (list)
-  (let (nechet)
-    (dolist (x list)
-      (if (evenp x)()
-          (push x nechet)
-          )) list nechet ))
-(print( razdel '(1 2 3 4 5 4 3 2 1)))
