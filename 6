@@ -1,15 +1,18 @@
-(defun change (list )
-  (loop
-     for item in list   do
-    (if(eq 1 item) (setq a "one"))
-    (if(eq 2 item) (setq a "two")) 
-    (if(eq 3 item) (setq a "three")) 
-    (if(eq 4 item) (setq a "four")) 
-    (if(eq 5 item) (setq a "five")) 
-    (if(eq 6 item) (setq a "six")) 
-    (if(eq 7 item) (setq a "seven")) 
-    (if(eq 8 item) (setq a "eight")) 
-    (if(eq 9 item) (setq a "nine"))
-    (if(eq 0 item) (setq a "zeo")) 
-     collect a))
-(print(change'(1 2 3 4)))
+(defun changeNumbersToString (listNumber &optional listString )
+         (cond 
+          ((eq 1 (car listNumber))  (changeNumbersToString  (cdr listNumber) (cons "one" listString)))
+          ((eq 2 (car listNumber))  (changeNumbersToString  (cdr listNumber) (cons "two" listString)))
+          ((eq 3 (car listNumber))  (changeNumbersToString  (cdr listNumber) (cons "three" listString)))
+          ((eq 4 (car listNumber))  (changeNumbersToString  (cdr listNumber) (cons "four" listString)))
+          ((eq 5 (car listNumber))  (changeNumbersToString  (cdr listNumber) (cons "five" listString)))
+          ((eq 6 (car listNumber))  (changeNumbersToString  (cdr listNumber) (cons "six" listString)))
+          ((eq 7 (car listNumber))  (changeNumbersToString  (cdr listNumber) (cons "seven" listString)))
+          ((eq 8 (car listNumber))  (changeNumbersToString  (cdr listNumber) (cons "eight" listString)))
+          ((eq 9 (car listNumber))  (changeNumbersToString  (cdr listNumber) (cons "nine" listString)))
+          ((eq 0 (car listNumber))  (changeNumbersToString  (cdr listNumber) (cons "zero" listString)))
+          (t  listString)
+         )  
+)
+
+(print(changeNumbersToString '(1 2 3 4 5 0 9 8 7 6 ))) ; => ("six" "seven" "eight" "nine" "zero" "five" "four" "three" "two" "one") 
+
