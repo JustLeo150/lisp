@@ -1,3 +1,4 @@
+6. Определите функцию, переводящую список чисел в список соответствующих им названий.
 (defun changeNumbersToString (listNumber &optional listString )
          (cond 
           ((eq 1 (car listNumber))  (changeNumbersToString  (cdr listNumber) (cons "one" listString)))
