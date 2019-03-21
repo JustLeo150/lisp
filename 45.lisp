@@ -5,19 +5,16 @@
   )
 )
 
-(defun setProperty (Sym Prop value) 
-    (setf (get Sym Prop) value)
+(defun setCity(Sym &key x y ) 
+    (setf (get Sym 'x) x)
+    (setf (get Sym 'y) y)
   
 )
- 
-(setProperty 'London 'x 2270)
-(setProperty 'London 'y -445)
 
-(setProperty 'Moscow 'x 125)
-(setProperty 'Moscow 'y -125)
+(setCity 'London :x 2270 :y -445)
+(setCity 'Moscow :x 125 :y -125)
+(setCity 'Krasnodar :x 300 :y 300)
 
-(setProperty 'Krasnodar 'x 300)
-(setProperty 'Krasnodar 'y -150)
 
 
 (print(distance 'Moscow 'Krasnodar)) ; => 176.7767 
