@@ -1,3 +1,4 @@
+;48.Напишите предикат (ИМЕЕТ-СВОЙСТВО символ свойство), который проверяет, обладает ли символ данным свойством.
 (defun HasProperty(x property)
   (FindProperty property (symbol-plist x))
 )
@@ -12,7 +13,6 @@
 
 (defun setProperty (Sym Prop value) 
     (setf (get Sym Prop) value)
-  
 )
 
 (setProperty 'Symbol 'first 300)
