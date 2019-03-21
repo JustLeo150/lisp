@@ -1,7 +1,7 @@
 48. Напишите предикат (ИМЕЕТ-СВОЙСТВО символ свойство), который проверяет, обладает ли символ данным свойством.
 
-(defun HasProperty(x prop)
-  (FindProperty prop (symbol-plist x))
+(defun HasProperty(x property)
+  (FindProperty property (symbol-plist x))
 )
 
 (defun FindProperty(property list)
