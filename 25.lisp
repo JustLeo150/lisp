@@ -2,7 +2,7 @@
 (defun delete-evens (list)
     ((lambda (head tail) 
           (cond 
-              ((null tail) list)
+              ((null head) list)
               ((evenp head) (delete-evens tail))
               (t (cons head (delete-evens tail)))
           )
@@ -11,6 +11,5 @@
      (cdr list)
     )
 )
-(print( delete-evens '(1 2 3 4 5 9 8 7 6 ))) => (1 3 5 9 7 6) 
-             
-             
+(print( delete-evens '(1 2 3 4 5 9 8 7 6 ))) ; => (1 3 5 9 7) 
+(print( delete-evens '(2 2 2 1 3 5 6 ))) ; => (1 3 5) 
