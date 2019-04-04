@@ -1,0 +1,24 @@
+; 4. Заданный числовой список разбить на подсписки из возрастающих подпоследовательностей максимальной длины рядом стоящих чисел.
+(defun increase-sub-lists(arr)
+    (cond
+        ((null  arr) (list arr))
+        ((null (cdr arr)) (list arr))
+        (t    (let (
+                       (current-number (car arr))
+                       (following-numbers (increase-sub-lists (cdr arr)))
+                   )
+                  
+                   (cond
+                       ((< current-number (caar following-numbers)) (cons 
+                                                                         (cons current-number (car following-numbers))
+                                                                         (cdr following-numbers)
+                                                                    )
+                       )
+                       (t(cons (list current-number) following-numbers))
+                   )
+              )             
+         )    
+     )
+)   
+
+(print(increase-sub-lists'(2 7 10 8 3 4 9 1 2 0 8 3 2 5))) ; => ((2 7 10) (8) (3 4 9) (1 2) (0 8) (3) (2 5)) 
